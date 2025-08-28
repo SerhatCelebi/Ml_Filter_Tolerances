@@ -25,24 +25,12 @@ Script, aşağıdakine benzer bir JSON üretir:
 }
 ```
 
-### Performans İyileştirmeleri (Uygulandı)
-- Median cache (tek sefer hesaplanır)
-- Vektörize filtreleme (NumPy mask ile)
-- OOB scoring (CV yerine hızlı ve güvenilir)
-- Batch işleme ve canlı ilerleme logları
-- Maksimum filtre sayısının sınırlandırılması (varsayılan 6)
 
 ### Büyük Veri İçin Öneriler
 - SSD kullanın; HDD okuma yavaşlatır
 - Python 3.10+ ve 64-bit ortam tercih edin
-- CPU çekirdek sayısını artırın (script hepsini kullanır)
-- Gerekirse tolerans ızgarasını daraltın (kod içindeki `tolerance_grid`)
 - Maksimum filtre sayısını düşürün: `max_filters=min(5, len(fields))`
 
-### Sorun Giderme
-- “Hiç ilerlemiyor” → Büyük kombinasyon uzayı. `max_filters` ve `tolerance_grid`’i küçültün.
-- “Bellek hatası” → Batch size’i küçültün (200 → 100) ve aynı anda daha az iş gönderin.
-- “Çok az sonuç” → Minimum support eşiğini düşürün (kodda 50 → 30 civarı).
 
 ### Dosya Beklentileri
 - `odds.json`: JSON array; alanlar: `odd_1`, `odd_x`, `odd_2`, `odd_1x`, `odd_12`, `odd_x2`, `bts_yes`, `bts_no`, `o+X.y`, `u+X.y`, `event_ft_result`, `event_halftime_result`, `event_date`.
