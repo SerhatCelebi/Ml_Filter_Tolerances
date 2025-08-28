@@ -1,0 +1,34 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual env
+.venv/
+venv/
+ENV/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python tooling
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+
+# Logs
+*.log
+
+# Data outputs
+outputs/
+results/
+*.csv
+*.parquet
+
+# Large data (keep local)
+odds.json
+
+# IDE
+.vscode/
+.idea/
