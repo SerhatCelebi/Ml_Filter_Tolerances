@@ -1,4 +1,4 @@
-## ML Optimizer (EXHAUSTIVE) — Kullanım ve Performans İpuçları
+## ML Football Odds Data / Filter Tolerances
 
 ### Amaç
 `ml_optimizer.py` geçmiş oran verilerinizden (odds.json) her tahmin türü için en iyi filtre ve tolerans kombinasyonlarını bulur. Çıktı, Türkçe özet JSON formatındadır.
